@@ -1,0 +1,197 @@
+Font awesome links {
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+}
+
+For the correct Nav {
+    html 
+
+    <sectoin class=" banner" id="sec">
+        <header>
+            <a href="#" class="logo">INKO2</a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2>Hello,<br>We're <span>INKO2</span></h2>
+            <p>We are the two brothers that teach everyone coding and other life skizlls made easy for everyone to undestand. We mainly teach web development to those who want to create awesome websites that inspire. Learn the future of the world.<strong> STOP.
+                GO INKO!</strong>
+            </p>
+            <a href="coding.html">Code Now!</a>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </sectoin>
+    <div id="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="coding.html">Coding</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="websites.html">Websites</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+
+    Js 
+
+    <script type="text/javascript">
+        function toggle() {
+            var sec = document.getElementById('sec');
+            var nav = document.getElementById('navigation');
+            sec.classList.toggle('active')
+            nav.classList.toggle('active')
+        }
+    </script>
+}
+
+For nav bars that do not want the header image (other-nav)
+{
+
+    html
+
+    <div class="other-nav">
+        <ul>
+            <li><a class="dissapear" href="home.html">Home</a></li>
+            <li><a class="dissapear active-nav" href="coding.html">Coding</a></li>
+            <li><a class="dissapear" href="kitchen.html">Kitchen</a></li>
+            <li><a class="dissapear" href="websites.html">Websites</a></li>
+            <li><a class="dissapear" href="contact.html">Contact</a></li>
+            <li><a class="dissapear" href="about.html">About</a></li>
+            <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+        </ul>
+        <!-- <hr class="nav-hr"> -->
+
+    </div>
+    <ul class="nav-toggle" id="nav-toggle">
+        <li><a href="home.html">Home</a></li>
+        <li><a class="active-nav" href="coding.html">Coding</a></li>
+        <li><a href="kitchen.html">Kitchen</a></li>
+        <li><a href="websites.html">Websites</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <i class="fas fa-bars menu-toggle"></i>
+    </ul>
+
+    css 
+
+    /* Other Nav Bar Styles */
+
+    .other-nav {
+        height: 50px;
+        margin-bottom: 0px;
+        background: #121212;
+    }
+
+    .other-nav ul {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        position: relative;
+        right: 20px;
+    }
+
+    .other-nav ul li {
+        list-style-type: none;
+    }
+
+    .other-nav ul li a {
+        text-decoration: none;
+        color: #f1f1f1;
+        margin: 10px;
+        font-size: 18px;
+        line-height: 50px;
+        transition: 0.2s ease;
+    }
+
+    .other-nav ul li a:hover,
+    .other-nav ul li a.nav-act {
+        color: #40c3ff;
+        transition: 0.2s ease;
+    }
+
+    
+    .menu-toggle {
+        color: #f1f1f1;
+        font-size: 24px;
+        line-height: 50px;
+        position: relative;
+        top: 12px;
+        opacity: 1;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .nav-toggle {
+        width: 300px;
+        background: #f1f1f1;
+        height: calc(100vh - 50px);
+        margin-top: -30px;
+        padding: 20px;
+        position: fixed;
+        transform: translateX(-300px);
+        transition: 0.5s ease;
+    }
+
+    .nav-toggle.active-nav {
+        transform: translateX(0px);
+        transition: 0.5s ease;
+    }
+
+    .menu-toggle.active-nav {
+        color: #40c3ff;
+        transform: rotate(30deg);
+        transition: 0.3s;
+    }
+
+    .nav-toggle li {
+        list-style: none;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .dissapear {
+        visibility: visible;
+    }
+
+    .nav-toggle li a {
+        color: #434343;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-toggle li a:hover {
+        color: #40c3ff;
+    }
+    /* Responsive Nav */
+
+    @media only screen and (max-width: 648px) {
+        .dissapear {
+            visibility: hidden;
+        }
+        .menu-toggle {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    Javascript 
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navToggle = document.getElementById('nav-toggle');
+
+        var needed = {
+            truthy: true
+        }
+
+        menuToggle.onclick = function() {
+            navToggle.classList.toggle('active-nav');
+            menuToggle.classList.toggle('active-nav');
+        }
+    </script>
+
+}
