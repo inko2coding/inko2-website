@@ -13,11 +13,12 @@
 <body>
     <sectoin class="banner-other" id="sec">
         <header>
-            <a href="#" class="logo">INKO2</a>
+            <a href="home.html" class="logo">INKO2</a>
+            <h2>Coding</h2>
             <div id="toggle" onclick="toggle()"></div>
         </header>
     </sectoin>
-    <div id="navigation">
+    <div id="navigation-other">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="coding.html">Coding</a></li>
@@ -109,7 +110,7 @@
 <script type="text/javascript">
     function toggle() {
         var sec = document.getElementById('sec');
-        var nav = document.getElementById('navigation');
+        var nav = document.getElementById('navigation-other');
         sec.classList.toggle('active')
         nav.classList.toggle('active')
     }
