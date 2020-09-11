@@ -766,3 +766,26 @@ footer h2 {
     color: #000;
     transition: 0.3s ease;
 }
+
+
+/* About page Styles */
+
+.text-abt-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-text {
+    max-width: 400px;
+    text-align: center;
+}
+
+.inesh {
+    position: relative;
+    margin-top: 30px;
+}
+
+.names b {
+    color: #40c3ff;
+}

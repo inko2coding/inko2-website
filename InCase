@@ -195,3 +195,211 @@ For nav bars that do not want the header image (other-nav)
     </script>
 
 }
+
+Footer {
+    html 
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+                        <h3>INKO2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi repellendus saepe expedita consequatur soluta, at quaerat fugit maxime odit quam!</p>
+                    </div>
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+                        <h2>Quick links</h2>
+                        <ul>
+                            <li><a href="#">Top of page</a></li>
+                            <li><a class="nav-act" href="coding.html">Coding</a></li>
+                            <li><a href="kitchen.html">Kitchen</a></li>
+                            <li><a href="websites.html">Websites</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-three sm-mb-30">
+                        <h2>Follow Us</h2>
+                        <p>Follow us on social media to stay updated on deals and updtates. Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, voluptatem?</p>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-four sm-mb-30">
+                        <h2>Our Newletter</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, reiciendis. Architecto neque laudantium aliquam ad!</p>
+                        <form action="">
+                            <input type="email" placeholder="abc@123.com">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2 Websites</p>
+    </footer>
+
+    css
+
+    /* Footer Styles */
+
+    footer p {
+        color: #999;
+        line-height: 25px;
+    }
+
+    footer h2,
+    footer h3 {
+        color: #fff;
+    }
+
+    footer h2 {
+        font-size: 18px;
+    }
+
+    .footer-top {
+        background: #111111;
+        padding: 80px 0;
+    }
+
+    .footer-row div {
+        width: 300px;
+        margin: 10px;
+    }
+
+    .footer .first-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .segment-one h3 {
+        font-family: 'Courgette';
+        color: #fff;
+        letter-spacing: 3px;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    .segment-two h2 {
+        color: #fff;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+    }
+
+    .segment-two h2:before {
+        content: '|';
+        color: #40c3ff;
+        padding-right: 10px;
+    }
+
+    .segment-two ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        min-width: 200px;
+    }
+
+    .segment-two ul li {
+        border-bottom: 1px solid #ffffff88;
+        line-height: 30px;
+    }
+
+    .segment-two ul li a {
+        color: #999;
+        text-decoration: none;
+        font-weight: 200;
+    }
+
+    .segment-three h2 {
+        color: #fff;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+    }
+
+    .segment-three h2:before {
+        content: '|';
+        color: #40c3ff;
+        padding-right: 10px;
+    }
+
+    .segment-three a {
+        background: #484949;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 50%;
+    }
+
+    .segment-three a i {
+        font-size: 20px;
+        color: #fff;
+        padding: 10px 12px;
+        transition: 0.25s;
+    }
+
+    .segment-three a i:hover {
+        color: #232323;
+        transition: 0.25s;
+    }
+
+    .segment-four h2 {
+        color: #fff;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+    }
+
+    .segment-four {
+        min-width: 300px;
+    }
+
+    .segment-four h2:before {
+        content: '|';
+        color: #40c3ff;
+        padding-right: 10px;
+    }
+
+    .segment-four form input[type=submit] {
+        background: rgb(7, 7, 100);
+        border: none;
+        padding: 2px 15px;
+        margin-left: -5px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .footer-bottom-text {
+        text-align: center;
+        background: #000;
+        line-height: 40px;
+        min-height: 70px;
+        padding: 10px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .md-mb-30 {
+            margin-bottom: 30px;
+        }
+        /* .segment-three {
+            min-width: 500px;
+        } */
+    }
+
+    @media only screen and (max-width: 767px) {
+        .sm-mb-30 {
+            margin-bottom: 30px;
+        }
+        .footer-top {
+            padding: 50px 0;
+        }
+    }
+
+
+    
+}
