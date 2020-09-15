@@ -747,6 +747,7 @@ footer h2 {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .btn-cont .btn {
@@ -780,6 +781,15 @@ footer h2 {
 .intro-text {
     max-width: 400px;
     text-align: center;
+    transform: translateY(40px) translateX(-40px);
+    opacity: 0;
+    transition: 0.8s all ease-in-out;
+    margin-bottom: 80px;
+}
+
+.intro-appear {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
 }
 
 .inesh {
