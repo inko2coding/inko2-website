@@ -83,13 +83,15 @@ header #toggle:after {
     background: #fff;
 }
 
-.banner.active header #toggle:before {
+.banner.active header #toggle:before,
+.banner-other.active header #toggle:before {
     top: 7px;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.banner.active header #toggle:after {
+.banner.active header #toggle:after,
+.banner-other.active header #toggle:after {
     top: 7px;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
@@ -325,6 +327,7 @@ header #toggle:after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transform: translateX(0px);
 }
 
 .col {
@@ -354,6 +357,33 @@ header #toggle:after {
 .stars {
     color: #40c3ff;
     margin-bottom: 20px;
+}
+
+.testimonial-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-nav h1 {
+    margin: -50px 10px 40px 10px;
+    color: #898989;
+    font-size: 60px;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+.testimonial-nav h1:hover {
+    color: #bcbcbc;
+    transition: ease 0.3s;
+}
+
+.testimonial-nav h1.active {
+    color: #565656;
+}
+
+#test-two,
+#test-three {
+    display: none;
 }
 
 @media screen and (max-width: 960px) {
@@ -784,7 +814,7 @@ footer h2 {
     transform: translateY(40px) translateX(-40px);
     opacity: 0;
     transition: 0.8s all ease-in-out;
-    margin-bottom: 80px;
+    margin-top: 100px;
 }
 
 .intro-appear {
@@ -792,11 +822,52 @@ footer h2 {
     opacity: 1;
 }
 
-.inesh {
-    position: relative;
-    margin-top: 30px;
+.ora-txt {
+    color: #ffc340;
 }
 
-.names b {
+.gre-txt {
+    color: #40ffc3;
+}
+
+.icon-nav-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.icon-nav-cont div {
+    margin: 50px 25px 80px 25px;
+    display: flex;
+    background: #000;
+    width: 100px;
+    align-items: center;
+}
+
+.icon-nav-cont div a {
+    position: absolute;
+    text-decoration: none;
+    text-align: center !important;
+    color: #434343;
+    transition: all ease 0.3s;
+}
+
+.icon-nav-cont div a:hover {
     color: #40c3ff;
+    transition: all ease 0.3s;
+}
+
+.icon-nav-cont div a i {
+    text-align: center;
+    font-size: 30px;
+}
+
+.abt-txt-img {
+    margin-top: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-nav-cont div {
+        margin: 50px 10px 80px 10px;
+    }
 }

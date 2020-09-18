@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INKO2 | Coding</title>
+    <title>INKO2 | About</title>
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 
 <body>
-    <sectoin class="banner-other" id="sec">
+    <section class="banner-other" id="sec">
         <header>
             <a href="home.html" class="logo">INKO2</a>
             <h2>About Us</h2>
             <div id="toggle" onclick="toggle()"></div>
         </header>
-    </sectoin>
+    </section>
     <div id="navigation-other">
         <ul>
             <li><a href="#">Home</a></li>
@@ -32,12 +32,28 @@
         <h1>INKO2</h1>
         <div class="border"></div>
     </div>
+    <div class="icon-nav-cont">
+        <div>
+            <a href="#"><i class="fas fa-abt fa-users"></i><p class="abt-nav-icon-txt">Our Team</p></a>
+        </div>
+        <div>
+            <a href="home.html#testimonials"><i class="fas fa-abt fa-quote-left"></i><p class="abt-nav-icon-txt">Testimonials</p></a>
+        </div>
+    </div>
     <div class="about-cont">
         <div class="text-abt-cont">
             <div class="intro-text">
-                <h2>We are eperienced web developers that help our clients with our first priority.</h2>
+                <h2>We are <b class="ora-txt">experienced</b> web developers that help our clients with our <b class="gre-txt">first priority</b>.</h2>
                 <!-- <h3 class="names inesh"><b class="inko2-letters">In</b>esh Kumaravel</h3>
                 <h3 class="names"><b class="inko2-letters">Ko</b>shik Kumaravel</h3> -->
+            </div>
+        </div>
+        <div class="featured-image abt-txt-img">
+            <img src="../images/bg.jpg">
+            <div class="fea-sec">
+                <h2>Established In...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae sunt incidunt in, repellendus, corporis nam inventore quas officiis fugit perspiciatis esse? Obcaecati autem earum saepe repudiandae, ipsa suscipit laudantium aspernatur
+                    tenetur totam dignissimos modi qui nulla libero nobis, porro quibusdam delectus aliquid soluta optio esse rem temporibus quo architecto fugiat.</p>
             </div>
         </div>
     </div>
@@ -99,7 +115,18 @@
         }
     }
 
+    function scrollAppearTxtImg() {
+        var txt = document.querySelector('.intro-text');
+        var introPosition = introText.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight / 1.3;
+
+        if (introPosition < screenPosition) {
+            introText.classList.add('intro-appear');
+        }
+    }
+
     window.addEventListener('scroll', scrollAppear);
+    window.addEventListener('scroll', scrollAppearTxtImg);
 </script>
 
 </html>
