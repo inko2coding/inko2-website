@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKO2 Inc. | Admin</title>
+    <link rel="stylesheet" href="ad-home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h2 id="ad">INKO2 Inc. | INKO2</h2>
+            <input id="search-input" class="float-right search" type="text" placeholder="Search">
+            <a href="../search/search.html"><i id="search-toggle" class="fa fa-search float-right search"></i></a>
+        </div>
+    </header>
+    <nav>
+        <a class="active" href="#"><i class="fa fa-home"></i>Home</a>
+        <a id="edit-page" onclick="editPagePopUp()" href="#"><i class="fa fa-edit"></i>Other</a>
+        <ul id="edit-page-details" class="small-text pop-up">
+            <li><a href="subsciption/subsription.html">Subscriptions</a></li>
+        </ul>
+        <a id="view" href="../index.html"><i class="fa fa-eye"></i>View Website</a>
+        <a id="view" href="../search/search.html"><i style="color: #343434;" class="fa fa-search"></i>Search</a>
+        <a id="settings" href="#"><i class="fa fa-cog"></i>Settings</a>
+    </nav>
+    <div class="body">
+        <h1>Admin Page Home</h1>
+        <h3>Events and Offers</h3>
+        <div class="events-box-cont">
+            <div class="events-box">
+                <h4>COVID OFFER</h4>
+                <p>Contact us to see if you and your family qualify for a 75% discount on coding classes. If you are currently unemployed, business is down due to COVID-19.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox">inko2coding@gmail.com &#8594</a>
+            </div>
+            <div class="events-box">
+                <h4>FREE TRIAL CLASS</h4>
+                <p>Get a free trial class to see if you like coding and to figure out which language is right for you. This class is totally free so we reccomend that you try it.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox">inko2coding@gmail.com &#8594</a>
+            </div>
+            <div class="events-box">
+                <h4>COVID OFFER</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nulla similique dolor tempora consequuntur quod, nemo, itaque accusamus aut, magni magnam! Exercitationem aut assumenda quis nemo temporibus alias deleniti laborum.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox">inko2coding@gmail.com &#8594</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const editPage = document.getElementById('edit-page');
+        const editPageDetails = document.getElementById('edit-page-details');
+
+        const popUp = {
+            editPage: true,
+        }
+
+        function editPagePopUp() {
+            if (popUp.editPage) {
+                editPageDetails.style.display = 'block';
+                popUp.editPage = false;
+            } else {
+                editPageDetails.style.display = 'none';
+                popUp.editPage = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

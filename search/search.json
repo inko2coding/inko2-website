@@ -1,0 +1,55 @@
+[{
+        "name": "Home Page",
+        "image": "../images/home-banner.jpg",
+        "house": "INKO2. Coding Classes, Websites...",
+        "linkTo": "../html/home.html"
+    },
+    {
+        "name": "Coding Page",
+        "image": "../images/home-banner.jpg",
+        "house": "Coding. The Future of the world...",
+        "linkTo": "../html/coding.html"
+    },
+    {
+        "name": "Websites Page",
+        "image": "../images/home-banner.jpg",
+        "house": "Websites. We create websites for...",
+        "linkTo": "../html/websites.html"
+    },
+    {
+        "name": "About Page",
+        "image": "../images/home-banner.jpg",
+        "house": "About. Learn about our name and...",
+        "linkTo": "../html/about.html"
+    },
+    {
+        "name": "Contact Page",
+        "image": "../images/home-banner.jpg",
+        "house": "Contact. Contact us with questions, ...",
+        "linkTo": "../html/contact.html"
+    },
+    {
+        "name": "Kitchen Page",
+        "image": "../images/home-banner.jpg",
+        "house": "Kitchen. Check our delicious munu ...",
+        "linkTo": "../html/kitchen.html"
+    },
+    {
+        "name": "Home Footer",
+        "image": "../images/home-banner.jpg",
+        "house": "Footer. INKO2. Follow Us, Newsletter",
+        "linkTo": "../html/home.html#footer"
+    },
+    {
+        "name": "A- Home",
+        "image": "../images/home-banner.jpg",
+        "house": "Admin. Home Page",
+        "linkTo": "../admin/ad-home.html"
+    },
+    {
+        "name": "A- Subsciptions",
+        "image": "../images/home-banner.jpg",
+        "house": "Admin. Subscriptions Page",
+        "linkTo": "../admin/subsciption/subsription.html"
+    }
+]

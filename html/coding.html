@@ -20,8 +20,8 @@
     </section>
     <div id="navigation-other">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="coding.html">Coding</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Coding</a></li>
             <li><a href="kitchen.html">Kitchen</a></li>
             <li><a href="websites.html">Websites</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -112,16 +112,35 @@
                     <div class="col-md-3 col-ms-6 col-xs-12 segment-four sm-mb-30">
                         <h2>Our Newletter</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, reiciendis. Architecto neque laudantium aliquam ad!</p>
-                        <form action="">
-                            <input type="email" placeholder="abc@123.com">
-                            <input type="submit" value="Subscribe">
-                        </form>
+
+                        <input type="email" id="email" placeholder="abc@123.com">
+                        <input type="submit" id="submit" value="Subscribe">
+
                     </div>
                 </div>
             </div>
         </div>
         <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2 Websites</p>
     </footer>
+    <!--Begin Comm100 Live Chat Code-->
+    <div id="comm100-button-a96561bd-be8a-4725-b817-849e03126210"></div>
+    <script type="text/javascript">
+        var Comm100API = Comm100API || {};
+        (function(t) {
+            function e(e) {
+                var a = document.createElement("script"),
+                    c = document.getElementsByTagName("script")[0];
+                a.type = "text/javascript", a.async = !0, a.src = e + t.site_id, c.parentNode.insertBefore(a, c)
+            }
+            t.chat_buttons = t.chat_buttons || [], t.chat_buttons.push({
+                code_plan: "a96561bd-be8a-4725-b817-849e03126210",
+                div_id: "comm100-button-a96561bd-be8a-4725-b817-849e03126210"
+            }), t.site_id = 10003182, t.main_code_plan = "a96561bd-be8a-4725-b817-849e03126210", e("https://vue.comm100.com/livechat.ashx?siteId="), setTimeout(function() {
+                t.loaded || e("https://standby.comm100vue.com/livechat.ashx?siteId=")
+            }, 5e3)
+        })(Comm100API || {})
+    </script>
+    <!--End Comm100 Live Chat Code-->
 </body>
 <script type="text/javascript">
     function toggle() {

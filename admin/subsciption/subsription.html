@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKO2 Inc. | Admin</title>
+    <link rel="stylesheet" href="../ad-home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h2 id="ad">INKO2 Inc. | INKO2</h2>
+            <input id="search-input" class="float-right search" type="text" placeholder="Search">
+            <a href="../../search/search.html"><i id="search-toggle" class="fa fa-search float-right search"></i></a>
+        </div>
+    </header>
+    <nav>
+        <a href="../ad-home.html"><i class="fa fa-home"></i>Home</a>
+        <a id="edit-page" onclick="editPagePopUp()" href="#"><i class="fa fa-edit"></i>Other</a>
+        <ul id="edit-page-details-no" class="small-text pop-up-no">
+            <li><a class="active" href="edit_page/ad-home.html">Subscriptions</a></li>
+        </ul>
+        <a id="view" href="../../index.html"><i class="fa fa-eye"></i>View Website</a>
+        <a id="view" href="../search/search.html"><i style="color: #343434;" class="fa fa-search"></i>Search</a>
+        <a id="settings" href="#"><i class="fa fa-cog"></i>Settings</a>
+    </nav>
+    <div class="body">
+        <h1>Subscription Page Details</h1>
+        <form action="../../html/subscribers.php" method="post">
+            <input type="password" class="search-other" placeholder="Enter the code " name="" pattern="inko2" id="password" oninvalid="setCustomValidity('Please enter the correct code')">
+            <input type="submit" class="search-other" id="submit" value="Log In"><br><br>
+        </form>
+    </div>
+    <script type="text/javascript">
+        const editPage = document.getElementById('edit-page');
+        const editPageDetails = document.getElementById('edit-page-details-no');
+
+        const popUp = {
+            editPage: true,
+        }
+
+        function editPagePopUp() {
+            if (popUp.editPage) {
+                editPageDetails.style.display = 'block';
+                popUp.editPage = false;
+            } else {
+                editPageDetails.style.display = 'block';
+                popUp.editPage = true;
+            }
+        }
+
+        const searchToggle = document.getElementById('search-toggle');
+        const searchInput = document.getElementById('search-input');
+
+        // searchToggle.onclick = function() {
+        //     searchInput.classList.toggle('search-reveal');
+        //     searchInput.classList.toggle('search-move');
+        //     searchToggle.classList.toggle('search-move');
+        // }
+    </script>
+
+</body>
+
+</html>
