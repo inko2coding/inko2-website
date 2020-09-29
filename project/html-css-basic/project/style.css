@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    background-color: white;
+}
+
+
+/* header */
+
+header {
+    padding: 30px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(21, 20, 30);
+    color: white;
+    line-height: 10px;
+}
+
+header a.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+/* the info portion of the project */
+
+.whole-info-text {
+    display: flex;
+    overflow-y: scroll;
+}
+
+.info-text {
+    background-color: white;
+    z-index: 0;
+    padding-top: 0;
+    margin: 0;
+    width: 40%;
+    text-align: left;
+}
+
+.info-text h4 {
+    margin: 0;
+    padding: 6px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: rgb(246, 245, 250);
+}
+
+.info-text h2 {
+    text-align: center;
+}
+
+.nice-line {
+    width: 30px;
+    height: 130vh;
+    margin-left: 30%;
+    margin-top: -100px;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgb(21, 20, 30);
+}
+
+.info-text button {
+    width: 30%;
+    border: transparent;
+    padding: 7px 0;
+    position: relative;
+    margin: 0;
+    font-size: 15px;
+    margin-top: 30px;
+    background-color: rgb(254, 212, 48);
+}
+
+.info-text .btn-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.info-text .rest {
+    padding: 10px 0;
+    padding-left: 20px;
+}
+
+.iframe-cover {
+    width: 100%;
+}
+
+.iframe-cover iframe {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    max-width: 905px;
+}
+
+
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 96%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(21, 20, 30);
+    color: white;
+    line-height: 10px;
+    padding-bottom: 10px;
+}
+
+footer .finished button {
+    width: 125px;
+    border: transparent;
+    padding: 7px 0;
+    margin-left: 20px;
+    margin-top: -10px;
+    font-size: 15px;
+    background-color: rgb(254, 212, 48);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* tasks */
+
+.checks {
+    overflow-y: scroll;
+}
+
+.problem {
+    display: flex;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.check p {
+    margin-left: 15px;
+    width: 70%;
+    font-size: 16px;
+}
+
+.check .checkbox {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.header {
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: rgb(246, 245, 250);
+}
+
+.hint {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 241, 182);
+}
+
+.grey-spot {
+    background-color: rgb(234, 233, 237);
+    font-weight: 400;
+}
+
+.hint .fas {
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+.hint .fas.turn {
+    transition: 0.4s ease;
+    transform: rotateZ(180deg);
+}
+
+.hint-sect {
+    background-color: rgb(255, 251, 231);
+    padding: 15px;
+    display: none;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.code-snip {
+    margin: 10px;
+    padding: 15px;
+    max-width: 240px;
+    background-color: rgb(10, 14, 29);
+    color: rgb(239, 250, 255);
+}
+
+
+/* these are for the code that applies to mutiple */
+
+.hidden {
+    display: none;
+}
+
+
+/* form */
+
+form {
+    width: 70%;
+    transform: translateX(20px);
+    height: 100vh;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    position: fixed;
+    z-index: -7;
+    top: 0;
+    right: 0;
+    background: linear-gradient(45deg, rgb(0, 0, 50), rgb(0, 247, 255));
+    overflow: overlay;
+}
+
+input,
+textarea {
+    width: 300px;
+    border: 1px solid #444;
+    background: #d7d7d7;
+    color: #222;
+}
+
+input {
+    height: 30px;
+}
+
+.name-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    width: 140px;
+    height: 30px;
+    margin: 9px;
+    margin-bottom: 20px;
+}
+
+.send {
+    width: 120px;
+    padding: 3px 12px;
+    height: 30px;
+    background: rgb(0, 0, 100);
+    border: transparent;
+    color: #fff;
+}
+
+
+/* media query */
+
+@media only screen and (max-width: 850px) {
+    .info-text button {
+        display: none;
+    }
+    .hidden {
+        display: block;
+    }
+    .iframe-cover {
+        display: none;
+    }
+    .nice-line {
+        display: none;
+    }
+    .info-text {
+        text-align: center;
+        flex: 2;
+    }
+    .checks {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 2;
+    }
+    .header {
+        flex: 1.7;
+    }
+    .show {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 406px) {
+    .title {
+        display: none;
+    }
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>Html5 Css3 Basic Project || INKO2 Inc.</title>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="#">INKO2 Inc.</a>
+        <span class="title">Contact Form</span>
+        <span class="title">Projects</span>
+        <!-- later change to the needed stuff -->
+    </header>
+    <div class="whole-info-text">
+        <div class="info-text">
+            <h4>Project</h4>
+            <h2 class="rest">Contact Form Project</h2>
+            <p class="rest">A small business owner has asked for you to create a way to allow their customers to contact them on their website.</p>
+            <h5 class="rest">Pre-knowledge: Basic HTML and CSS</h5>
+            <p class="rest">
+                Today you'll be building a contact form that your client can use on their website. Your contact form wil be using HTML and CSS. This form will not actually send emails quite yet as that will be on PART 2. There are hints to help you when you are stuck.
+                There is also a walk through video that you can access on the get unstuck button on the bottom corner.
+                <span class="hidden"> Click <a target="_blank" href="../final-product/index.html">here</a> to see what the final prduct should look like.</span>
+                <span class="hidden"> Click <a href="#" target="_blank">here</a> to get unstuck</span>
+            </p>
+            <div class="btn-cont">
+                <button id="start-btn" class="show">Get Started</button>
+            </div><br><br><br>
+            <div class="tasks hidden">
+                <div class="header">
+                    <h3><i class="far fa-check-square"></i> Tasks</h3>
+                    <span class="completed"></span>
+                </div>
+                <div class="checks">
+                    <!-- <div class="check check-one">
+                        <div class="problem">
+
+                            <input type="checkbox" name="checkbox1" class="checkbox">
+
+                            <span>1. </span>
+                            <p>Align the form to the center of the page using margins. <i><u>NOTE:</u> When you shrink the screen size the contact form should still be in the center.</i></p>
+                        </div><br><br>
+                        <div class="hint">
+                            <span>Stuck? Get a Hint</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="hint-sect">
+                            <p>Lorem ipsum dolor sit amet <b class="grey-spot">consectetur</b> adipisicing elit. Dolorem esse aliquam doloribus voluptatibus architecto natus ad facilis. Sequi, minima reprehenderit.</p>
+                            <div class="code-snip">
+                                <p>for(let i=0; i>4, i++) {<br> console.log(array[1]); <br>}
+                                </p>
+                            </div>
+                        </div>
+                    </div><br> -->
+                </div>
+            </div>
+        </div>
+        <div class="nice-line"></div>
+        <div class="iframe-cover">
+
+            <form action="" method="post">
+                <h2>Contact Form</h2>
+                <div class="name-cont">
+                    <input class="name" type="text" name="name" id="name" placeholder="First Name" required>
+                    <input class="name" type="text" name="surname" id="surname" placeholder="Last Name" required><br><br>
+                </div>
+                <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+                <input type="tel" name="cell-number" id="cell-number" placeholder="Phone Number"><br><br>
+                <textarea name="message" id="message" placeholder="message" required></textarea><br><br>
+                <input class="send" type="submit" value="SEND E-MAIL">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <span class="title">Contact Form</span>
+        <div class="finished">
+            <span class="completed-footer"></span>
+            <button id="finish-btn" type="reset">Finish Project</button>
+        </div>
+        <a class="show" href="mailto: inko2coding@gmail.com"><i class="fas fa-question-circle"></i> Get Unstuck</a>
+    </footer>
+
+
+</body>
+<script>
+    const steps = [{
+            stepNumber: 1,
+            step: '1. Create a file named <b class="grey-spot">index.html</b> in your text editor.<br><br>2. In index.html set up the html format which includes the <b class="grey-spot">DOCTYPE</b>, <b class="grey-spot">html</b>, <b class="grey-spot">head</b>, and <b class="grey-spot">body</b> tags.<br><br>3. Change the title to Contact Form in the <b class="grey-spot">title</b> tags in your head tags.',
+            hintNeed: true,
+            hint: 'Use the <b class="grey-spot">html:5</b> command to set up the format then change the <b class="grey-spot">title</b> tag to Contact Form. * Be sure to include the closing tags for all your tags.',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 2,
+            step: 'In the body of index.html create a <b class="grey-spot">div</b> tag with a class of <b class="grey-spot">container</b>.',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 3,
+            step: 'Inside the div with a class of container create a <b class="grey-spot">form</b> tag with a method of <b class="grey-spot">POST</b> and an action of <b class="grey-spot">#</b>. Inside the form tag add a <b class="grey-spot">h2</b> tag that says Contact Form',
+            hintNeed: true,
+            hint: '',
+            codeSnippetNeed: true,
+            codeSnippet: '<form method="POST" action="#"></form>'
+        }, {
+            stepNumber: 4,
+            step: '1. Inside the form tag create another div with a class of name-cont.<br><br>2. Inside the div called name-cont create 2 <b class="grey-spot">input</b> tags with a type of text.<br><br>3. Give the first input tag a name of first-name and the second one a name of last-name.<br><br>4. Add a placeholder of First Name to the first input and Last Name to the second one.<br><br>5. After each input tag add two line-breaks.',
+            hintNeed: true,
+            hint: 'The name of the items do not really matter when styling them but will matter when the action makes the form actually send to e-mail.',
+            codeSnippetNeed: true,
+            codeSnippet: '<input type="text" name="first-name" placeholder="First Name"><br><br>\n<input type="text" name="last-name" placeholder="Last Name"><br><br>'
+        }, {
+            stepNumber: 5,
+            step: 'Still inside the form tags and right after the div with the class of name-cont, create another input tag with a type of <b class="grey-spot">email</b> and a name and placeholder of email. After the input tag add 2 line-breaks.',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 6,
+            step: 'Create another input tag right after the previous one with a type of <b class="grey-spot">tel</b> and a name of phone-number and a placeholder of Phone Number. At the end of the input tag add 2 line-breaks.',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 7,
+            step: 'After the phone number input tag create a <b class="grey-spot">textarea</b> with a name of message and placeholder of message. At the end of the textarea add two line-breaks.',
+            hintNeed: true,
+            hint: 'A textarea is a extension of an input tag that allows users to type in a message.',
+            codeSnippetNeed: true,
+            codeSnippet: '<textarea name="message" placeholder="message"></textarea><br><br>'
+        }, {
+            stepNumber: 8,
+            step: 'After the textarea create a new input tag with a type of <b class="grey-spot">submit</b> and a value of SEND E-MAIL.',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 9,
+            step: 'Make the textarea, first and last name, and the email required on the form.',
+            hintNeed: true,
+            hint: 'To make something required in a form add required before the ending tag of an input or textarea..',
+            codeSnippetNeed: true,
+            codeSnippet: '<input type="email" name="email" placeholder="email" required>\n<textarea name="message" placeholder="message" required></textarea>'
+        }, {
+            stepNumber: 10,
+            step: '<b>We will now begin styling the contact form.</b><br>Create a new file called <b class="grey-spot">style.css</b> and link it to your html file.',
+            hintNeed: true,
+            hint: 'The <b class="grey-spot">link</b> tags should be placed in the head tags. <br>*Make sure to have your css file in the same folder as the html file.',
+            codeSnippetNeed: true,
+            codeSnippet: '<link rel="stylesheet" href="style.css" type="text/css">'
+        }, {
+            stepNumber: 11,
+            step: 'In style.css, select all elements using the universal selector. Inside give it a margin and padding of 0. Also import the font <a target="blank" href="https://fonts.google.com/specimen/Open+Sans?query=op&sidebar.open=true&selection.family=Open+Sans:wght@400;700">Open Sans</a> to the css file. Then give the universal selector a font-family of Open Sans with a backup font of sans-serif.<br><i><u>NOTE:</u> Make sure to select the font weights of 400 and 700.',
+            hintNeed: true,
+            hint: 'The universal selector is selected with an <b class="grey-spot">asterix*</b>. ',
+            codeSnippetNeed: true,
+            codeSnippet: '@import url(\'https://fonts.go\nogleapis.com/css2?family=Open+Sans:wght\n@400;700&display=swap\');\n\n* {\nmargin:0;\npadding: 0;\nfont-family: \'Open Sans\', sans-serif;\n}'
+        }, {
+            stepNumber: 12,
+            step: 'Now let\'s style the body. Give the body a background using <b class="grey-spot">linear gradients</b>. Make sure the linear gradient is at 45 degrees and uses these colors:<br>rgb(0, 0, 50)<br>rgb(0, 247, 255)<br>Also make sure that overflow is hidden.',
+            hintNeed: true,
+            hint: '',
+            codeSnippetNeed: true,
+            codeSnippet: 'body {\nbackground: linear-gradient(45deg, rgb(0, 0, 50), rgb(0, 247, 255));\noverflow: hidden;\n}'
+        }, {
+            stepNumber: 13,
+            step: 'Next, select the form: <br><br>1. Give it a height of 100vh so that it covers the entire screeen. <br><br>2. Then, using margin, position it to the center of the screen horizontally. <br><br>3. Give it a padding of 100 pixels on the top and bottom and 0 pixels on the left and right. <br></br>4. Lastly make all the text inside of the form align in the center.',
+            hintNeed: true,
+            hint: '',
+            codeSnippetNeed: true,
+            codeSnippet: 'form {\nheight: 100vh;\nmargin: 0 auto;\npadding: 100px 0;\ntext-align: center;\n}'
+        }, {
+            stepNumber: 14,
+            step: 'Now we need to select the input tags AND the textarea tag.<br><br>1. Give them a width of 300 pixels.<br><br>2. Also give them a solid border of 1px with a color of #444444.<br><br>3. Then give them a background of #d7d7d7 and a color of #222222.',
+            hintNeed: true,
+            hint: 'To select multiple tags use a comma.<br>ex: p, span {<br> code... <br>}.',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 15,
+            step: 'Then select only the input tags and give them a height of 30 pixels.',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 16,
+            step: 'Afterward select the div with a class of name-cont and give it a <b class="grey-spot">display</b> of flex and a <b class="grey-spot">justify content</b> center.',
+            hintNeed: true,
+            hint: 'To select classes use a <b class="grey-spot">.</b> before the name of the class.',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 17,
+            step: 'Now select the input tags with a type of text.<br><br>1. Give them a width of 140 pixels and a height of 30 pixels.<br><br>2. Give it a margin of 9 pixels and a margin bottom of 20 pixels.',
+            hintNeed: true,
+            hint: '',
+            codeSnippetNeed: true,
+            codeSnippet: 'input [type = text] {\n width: 140px;\n height: 30px;\n margin: 9px;\n margin-bottom: 2px;\n}'
+        }, {
+            stepNumber: 18,
+            step: 'Now finally we will style the submit button.<br><br>1. Give the submit button a width of 120 pixels and a height of 30 pixels.<br><br>2. Give it a padding of 3 pixels on the top and bottom and 12 pixels on the sides.<br><br>3. Then give the submit button a border that is transparent.',
+            hintNeed: true,
+            hint: 'input [type = submit]',
+            codeSnippetNeed: true,
+            codeSnippet: 'border: transparent;'
+        }, {
+            stepNumber: 19,
+            step: 'Now give the submit button a background color of rgb(0, 0, 100) and a color of white.',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        }, {
+            stepNumber: 20,
+            step: 'You have successfully completed The Contact Form Project.<br>If you need help doing this project click <a href="#">here</a> for a walkthrough.<br>Click finish project once you have finished.<br><br>',
+            hintNeed: false,
+            hint: '',
+            codeSnippetNeed: false,
+            codeSnippet: ''
+        },
+
+    ]
+
+    // ___________________________________-APP-_______________________________
+    // ##### dynamic steps #####
+
+    let stepsCompleted = 0;
+
+
+    function setCompletedSteps() {
+        document.querySelector('.completed').innerHTML = `${stepsCompleted}/${steps.length} Completed`;
+        document.querySelector('.completed-footer').innerHTML = `${stepsCompleted}/${steps.length} Completed`;
+    }
+
+    function checkClick(id) {
+        if (document.getElementById('checkbox' + id).checked) {
+            stepsCompleted++;
+
+            setCompletedSteps();
+        } else {
+            stepsCompleted--;
+            Math.abs(parseInt(stepsCompleted));
+            setCompletedSteps();
+        }
+    }
+
+    function hintClick(id) {
+        if (document.querySelector('#hint' + id + ' .fa-chevron-down').classList == 'fas fa-chevron-down') {
+            document.querySelector('#hint-sect' + id).style.display = 'block';
+            document.querySelector('#hint' + id + ' span').innerHTML = 'Hint';
+            document.querySelector('#hint' + id + ' .fa-chevron-down').classList = 'fas fa-chevron-down turn';
+        } else {
+            document.querySelector('#hint-sect' + id).style.display = 'none';
+            document.querySelector('#hint' + id + ' span').innerHTML = 'Stuck? Get a Hint';
+            document.querySelector('#hint' + id + ' .fa-chevron-down').classList = 'fas fa-chevron-down';
+        }
+
+        // if (document.querySelector(`#hint${id} .fas`).classList === 'fas fa-chevron-down') {
+
+        //     document.getElementById(`hint-sect${id}`).style.display = 'block';
+        //     document.getElementById(`hint${id}`).innerHTML = 'Hint';
+        //     document.querySelector(`#hint${id} .fas`).classList = 'fas fa-chevron-down turn';
+        // } else {
+
+        //     document.getElementById(`hint-sect${id}`).style.display = 'none';
+        //     document.querySelector(`hint${id} span`).innerHTML = 'Stuck? Get a Hint';
+        //     document.querySelector(`#hint${id} .fas`).classList = 'fas fa-chevron-down'
+        // }
+    }
+
+    function setSteps() {
+        for (let i = 0; i < steps.length; i++) {
+            if (steps[i].hintNeed && steps[i].codeSnippetNeed) {
+                document.querySelector('.checks').innerHTML += `
+                <div class="check check-${steps[i]}">
+                    <div class="problem">
+                        <input type="checkbox" onclick="checkClick(${steps[i].stepNumber})" name="checkbox${steps[i].stepNumber}" class="checkbox" id="checkbox${steps[i].stepNumber}">
+                        <span>${steps[i].stepNumber}. </span>
+                        <p>${steps[i].step}</p>
+                    </div><br><br>
+                    <div class="hint" onclick="hintClick(${steps[i].stepNumber})" id="hint${steps[i].stepNumber}">
+                        <span>Stuck? Get a Hint</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                        <div class="hint-sect" id="hint-sect${steps[i].stepNumber}" >
+                            <p>${steps[i].hint}</p>
+                            <div class="code-snip">
+                                <p id="code-snip-p${steps[i].stepNumber}" >
+                                </p>
+                            </div>
+                        </div>
+                    </div><br>
+                </div>    
+            `;
+                document.getElementById('code-snip-p' + steps[i].stepNumber).innerText = steps[i].codeSnippet;
+            } else if (steps[i].hintNeed && !steps[i].codeSnippetNeed) {
+                document.querySelector('.checks').innerHTML += `
+                <div class="check check-${steps[i]}"> 
+                    <div class="problem">
+                        <input type="checkbox" onclick="checkClick(${steps[i].stepNumber})" name="checkbox${steps[i].stepNumber}" class="checkbox" id="checkbox${steps[i].stepNumber}">
+                        <span>${steps[i].stepNumber}. </span>
+                        <p>${steps[i].step}</p>
+                    </div><br><br>
+                    <div class="hint" onclick="hintClick(${steps[i].stepNumber})" id="hint${steps[i].stepNumber}">
+                        <span>Stuck? Get a Hint</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="hint-sect" id="hint-sect${steps[i].stepNumber}">
+                        <p>${steps[i].hint}</p>
+                        
+                    </div>
+                    </div><br>
+                </div>
+            `;
+            } else if (!steps[i].hintNeed && steps[i].codeSnippetNeed) {
+                document.querySelector('.checks').innerHTML += `
+                <div class="check check-${steps[i]}"> 
+                    <div class="problem">
+                        <input type="checkbox" onclick="checkClick(${steps[i].stepNumber})" name="checkbox${steps[i].stepNumber}" class="checkbox" id="checkbox${steps[i].stepNumber}">
+                        <span>${steps[i].stepNumber}. </span>
+                        <p>${steps[i].step}</p>
+                    </div><br><br>
+                </div>
+            `;
+            } else if (!steps[i].hintNeed && !steps[i].codeSnippetNeed) {
+                document.querySelector('.checks').innerHTML += `
+                <div class="check check-${steps[i]}"> 
+                    <div class="problem">
+                        <input type="checkbox" onclick="checkClick(${steps[i].stepNumber})" name="checkbox${steps[i].stepNumber}" class="checkbox" id="checkbox${steps[i].stepNumber}">
+                        <span>${steps[i].stepNumber}. </span>
+                        <p>${steps[i].step}</p>
+                    </div><br><br><br>
+                </div>
+            `
+            } else {
+                document.querySelector('.checks').innerHTML += `
+                <div class="check check-${steps[i]}"> 
+                    <div class="problem">
+                        <input type="checkbox" onclick="checkClick(${steps[i].stepNumber})" name="checkbox${steps[i].stepNumber}" class="checkbox" id="checkbox${steps[i].stepNumber}">
+                        <span>${steps[i].stepNumber}. </span>
+                        <p>${steps[i].step}</p>
+                    </div><br><br><br>
+                </div>
+            `
+            }
+
+
+        }
+    }
+    setSteps();
+
+
+
+
+
+
+    // undynamic
+
+    const tasks = document.querySelector('.tasks');
+    const startBtn = document.getElementById('start-btn');
+    const checked = document.getElementById('check-1')
+    const finishBtn = document.getElementById('finish-btn');
+    const hintArrow = document.querySelector('.hint .fas');
+    const hint = document.querySelector('.hint span');
+    const hintSection = document.querySelector('.hint-sect');
+
+    finishBtn.onclick = function() {
+        if (stepsCompleted == steps.length) {
+
+            location.href = '../final-product/index.html';
+        } else {
+            var r = confirm('You have not completed all the steps for this project.\nIf you wish to discontinue the project then click ok.');
+            if (r) {
+
+                location.href = '../final-product/index.html';
+            }
+        }
+    }
+
+    const trueFalseVars = {
+        tasks: false,
+        hintArrow: false,
+    }
+
+
+    startBtn.onclick = function() {
+        if (!trueFalseVars.tasks) {
+            tasks.classList -= 'hidden';
+            startBtn.innerHTML = 'Hide Progress';
+            trueFalseVars.tasks = true;
+        } else {
+            tasks.classList = 'tasks hidden';
+            startBtn.innerHTML = 'Get Started';
+            trueFalseVars.tasks = false;
+        }
+    }
+
+
+    window.onload = function() {
+        // Setting the completed steps 
+        setCompletedSteps();
+    }
+</script>
+
+</html>
