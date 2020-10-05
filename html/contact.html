@@ -14,6 +14,19 @@
             font-family: 'Poppins', sans-serif;
         }
         
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        p {
+            text-align: center;
+            color: #ddd;
+            margin-bottom: 50px;
+            max-width: 400px;
+        }
+        
         .contact-cont {
             width: 100%;
             height: 100vh;
@@ -21,8 +34,130 @@
             background-size: cover;
         }
         
+        .flex-cont {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: contact-up 1.3s 0.7s ease forwards;
+            margin-top: 100px;
+            opacity: 0;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        form {
+            max-width: 400px;
+        }
+        
+        form input {
+            width: 400px;
+        }
+        
+        input,
+        textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid orange;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        input.name {
+            width: 197px;
+            margin-right: 1px;
+        }
+        
+        input.last {
+            width: 197px;
+        }
+        
         .back-btn {
             color: #fff;
+            text-decoration: none;
+            border: 1px solid white;
+            margin: 5px;
+            position: relative;
+            top: 20px;
+            padding: 10px 14px;
+            transition: 0.3s;
+            z-index: 8;
+        }
+        
+        .back-btn:hover {
+            background: #fff;
+            transition: 0.3s;
+            color: #000;
+        }
+        
+        label {
+            color: #ddd;
+            font-weight: 600;
+        }
+        
+        label.l-name {
+            position: relative;
+            left: 105px;
+        }
+        
+        textarea {
+            width: 400px;
+            min-height: 50px;
+        }
+        
+        .send-btn {
+            max-width: 200px;
+            margin: 0 100px;
+            border: 2px solid orange;
+            padding: 5px 12px;
+            background: #000000aa;
+        }
+        
+        .message {
+            display: block;
+        }
+        
+        @keyframes contact-up {
+            0% {
+                margin-top: 100px;
+                opacity: 0;
+            }
+            100% {
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 650px) {
+            form {
+                max-width: 300px;
+            }
+            form input {
+                width: 300px;
+            }
+            input.name {
+                width: 300px;
+                margin-right: 0px;
+            }
+            input.last {
+                width: 300px;
+            }
+            label {
+                display: none;
+            }
+            .message {
+                display: block;
+                color: #777;
+                font-size: 14px;
+            }
+            textarea {
+                width: 300px;
+            }
         }
     </style>
 </head>
@@ -30,24 +165,26 @@
 <body>
     <div class="contact-cont">
         <a class="back-btn" href="home.html">Back to Home</a>
-        <div class="title">
-            <h1>Send Us A Message</h1>
-            <p>Contact us for questions, suggestions, orders, or anything else that you have in mind!</p>
-        </div>
-        <div class="contact-form">
-            <form action="#">
-                <label for="first-name">First Name</label>
-                <label for="last-name">Last Name</label><br>
-                <input type="text" name="first-name" placeholder="Brandon" required>
-                <input type="text" name="last-name" placeholder="Smith" required><br>
-                <label for="email">Email</label><br>
-                <input type="email" name="email" placeholder="bsmith@example.com" required><br>
-                <label for="phone-number">Number</label><br>
-                <input type="tel" name="phone-number"><br>
-                <label for="message">Message</label><br>
-                <textarea name="message" required></textarea>
-                <input type="submit" value="SEND">
-            </form>
+        <div class="flex-cont">
+            <div class="title">
+                <h1>Send Us A Message</h1>
+                <p>Contact us for questions, suggestions, orders, or anything else that you have in mind!</p>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <label class="label" for="first-name">First Name*</label>
+                    <label class="l-name" for="last-name">Last Name*</label><br>
+                    <input class="name" type="text" name="first-name" placeholder="Brandon" required>
+                    <input class="last" type="text" name="last-name" placeholder="Smith" required><br>
+                    <label for="email">Email*</label><br>
+                    <input type="email" name="email" placeholder="bsmith@example.com" required><br>
+                    <label for="phone-number">Number</label><br>
+                    <input type="tel" placeholder="310 123 1234" name="phone-number"><br>
+                    <label class="message" for="message">Message*</label><br>
+                    <textarea name="message" required></textarea>
+                    <input type="submit" class="send-btn" value="SEND">
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -446,7 +446,7 @@ header #toggle:after {
 
 .featured-image .fea-sec p {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 28px;
     width: 100%;
     text-align: justify;
 }
@@ -928,4 +928,61 @@ footer h2 {
 .name {
     color: #333;
     text-align: center;
+}
+
+
+/* websites page styles */
+
+.web-iframe {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.web-iframe a.demo-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #40c3ff;
+    padding: 8px 10px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.web-iframe a.demo-btn:hover {
+    background-color: #006391;
+}
+
+.web-iframe .iframe-theme {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.showcase-web {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.showcase-web a.show-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #40c3ff;
+    padding: 8px 10px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.showcase-web a.show-btn:hover {
+    background-color: #006391;
+}
+
+.showcase-web .iframe-show {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }

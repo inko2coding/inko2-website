@@ -11,6 +11,8 @@ if (isset($_POST['email'])) {
             $fopen = fopen(__DIR__.'/subscribers.php', 'a');
             fwrite($fopen, $email.', ');
             fclose($fopen);
+            $message = "Thank You for subscribing to the INKO2 newsletter. You will be kept up to date with new deals and offers\nWelcome to the INKO2 family.\n\n\nINK2 Inc.\nCoding Classes and Web Development\nSTOP. GO INKO!";
+            mail($email, 'Thank You For Subscribing', $message, 'From: inko2coding@gmail.com');
             echo 'Thank you for subscribing';
         }
     } else {
