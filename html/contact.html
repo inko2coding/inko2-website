@@ -17,7 +17,7 @@
         h1 {
             color: #fff;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 50px;
         }
         
         p {
@@ -98,6 +98,7 @@
         label {
             color: #ddd;
             font-weight: 600;
+            text-align: left;
         }
         
         label.l-name {
@@ -115,6 +116,7 @@
             margin: 0 100px;
             border: 2px solid orange;
             padding: 5px 12px;
+            color: white;
             background: #000000aa;
         }
         
@@ -124,7 +126,7 @@
         
         @keyframes contact-up {
             0% {
-                margin-top: 100px;
+                margin-top: 50px;
                 opacity: 0;
             }
             100% {
@@ -171,22 +173,45 @@
                 <p>Contact us for questions, suggestions, orders, or anything else that you have in mind!</p>
             </div>
             <div class="contact-form">
-                <form action="#">
+                <!-- <form action="contactform.php" method="POST">
                     <label class="label" for="first-name">First Name*</label>
                     <label class="l-name" for="last-name">Last Name*</label><br>
                     <input class="name" type="text" name="first-name" placeholder="Brandon" required>
                     <input class="last" type="text" name="last-name" placeholder="Smith" required><br>
                     <label for="email">Email*</label><br>
-                    <input type="email" name="email" placeholder="bsmith@example.com" required><br>
-                    <label for="phone-number">Number</label><br>
+                    <input type="email" name="email" id="email" placeholder="bsmith@example.com" required><br>
+                    <label for="phone-number">Phone Number</label><br>
                     <input type="tel" placeholder="310 123 1234" name="phone-number"><br>
+                    <label for="subject">Subject*</label>
+                    <input type="text" name="subject" id="subject" placeholder="">
                     <label class="message" for="message">Message*</label><br>
                     <textarea name="message" required></textarea>
-                    <input type="submit" class="send-btn" value="SEND">
+                    <input type="submit" name="submit" class="send-btn" value="SEND">
+                </form> -->
+                <form class="contact-form" action="contactform.php" method="post">
+                    <div class="name-cont">
+                        <label class="label" for="first-name">First Name*</label>
+                        <label class="l-name" for="last-name">Last Name*</label><br>
+                        <input class="name" type="text" name="first-name" placeholder="Brandon" required>
+                        <input class="last" type="text" name="last-name" placeholder="Smith" required><br>
+                    </div>
+                    <div class="info">
+                        <label for="email">Email*</label><br>
+                        <input type="email" name="email" id="email" placeholder="bsmith@example.com" required><br>
+                        <label for="phone-number">Phone Number</label><br>
+                        <input type="tel" placeholder="310 123 1234" name="phone-number"><br>
+                        <label for="subject">Subject*</label>
+                        <input type="text" name="subject" id="subject" placeholder="subject" required>
+                        <label class="message" for="message">Message*</label><br>
+                        <textarea name="message" required></textarea>
+
+                    </div>
+                    <button class="send-btn" type="submit" name="submit">SEND</button>
                 </form>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

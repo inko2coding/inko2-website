@@ -1,0 +1,159 @@
+/* Footer Styles */
+
+footer p {
+    color: #999;
+    line-height: 25px;
+}
+
+footer h2,
+footer h3 {
+    color: #fff;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+.footer-top {
+    background: #111111;
+    padding: 80px 0;
+}
+
+.footer-row div {
+    width: 300px;
+    margin: 10px;
+}
+
+.footer .first-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.segment-one h3 {
+    font-family: 'Courgette';
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.segment-two h2 {
+    color: #fff;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+
+.segment-two h2:before {
+    content: '|';
+    color: #40c3ff;
+    padding-right: 10px;
+}
+
+.segment-two ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 200px;
+}
+
+.segment-two ul li {
+    border-bottom: 1px solid #ffffff88;
+    line-height: 30px;
+}
+
+.segment-two ul li a {
+    color: #999;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.segment-three h2 {
+    color: #fff;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+
+.segment-three h2:before {
+    content: '|';
+    color: #40c3ff;
+    padding-right: 10px;
+}
+
+.segment-three a {
+    background: #484949;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.segment-three a i {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 12px;
+    transition: 0.25s;
+}
+
+.segment-three a i:hover {
+    color: #232323;
+    transition: 0.25s;
+}
+
+.segment-four h2 {
+    color: #fff;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+
+.segment-four {
+    min-width: 300px;
+}
+
+.segment-four h2:before {
+    content: '|';
+    color: #40c3ff;
+    padding-right: 10px;
+}
+
+.segment-four input[type=submit] {
+    background: rgb(7, 7, 100);
+    border: none;
+    padding: 2px 15px;
+    margin-left: -5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    background: #000;
+    line-height: 40px;
+    min-height: 40px;
+    padding: 10px;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .md-mb-30 {
+        margin-bottom: 30px;
+    }
+    /* .segment-three {
+        min-width: 500px;
+    } */
+}
+
+@media only screen and (max-width: 767px) {
+    .sm-mb-30 {
+        margin-bottom: 30px;
+    }
+    .footer-top {
+        padding: 50px 0;
+    }
+}

@@ -4,6 +4,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -113,7 +120,7 @@ header #toggle:after {
 
 .banner-other {
     position: relative;
-    width: 100%;
+    min-width: 100%;
     height: 65vh;
     padding: 100px;
     background: url(../images/home-banner.jpg);
@@ -266,17 +273,20 @@ header #toggle:after {
     header {
         padding: 20px 50px;
     }
-    .banner {
+    .banner,
+    .banner-other {
         padding: 100px 50px 150px;
     }
-    .banner h2 {
+    .banner h2,
+    .banner-other h2 {
         font-size: 1.8em;
     }
     .banner .content p,
     .banner .content a {
         font-size: 1em;
     }
-    .banner.active {
+    .banner.active,
+    .banner-other.active {
         transform: translateX(-250px);
     }
     #navigation,
@@ -299,6 +309,8 @@ header #toggle:after {
         margin-right: 10px;
     }
 }
+
+@media only screen and (max-width: 520px) {}
 
 
 /* Testimonials styles */
@@ -341,7 +353,7 @@ header #toggle:after {
 .testimonial {
     background: #fff;
     padding: 30px;
-    max-height: 470px;
+    height: 470px;
     overflow: scroll;
 }
 

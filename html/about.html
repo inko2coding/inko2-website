@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INKO2 | About</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
 <body id="body_tag">
@@ -95,7 +94,7 @@
                 <div class="border"></div>
 
                 <div id="test-one" class="row">
-                    <div class="col">
+                    <!-- <div class="col">
                         <div class="testimonial">
                             <img src="../images/susan.jpg">
                             <div class="name">S. Bradshaw</div>
@@ -235,16 +234,16 @@
                             <i class="fas fa-quote-left"></i>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate repellendus illum necessitatibus aspernatur. Nihil nobis, commodi consequuntur repudiandae minima quasi?</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
         </div>
-        <div class="testimonial-nav">
+        <!-- <div class="testimonial-nav">
             <h1 class="active" id="test-pg-one">.</h1>
             <h1 id="test-pg-two">.</h1>
             <h1 id="test-pg-three">.</h1>
-        </div>
+        </div> -->
         <div id="our-team" class="our-team">
             <div class="testimonials">
                 <h1>Our Team</h1>
@@ -319,6 +318,7 @@
     </footer>
     <!--Begin Comm100 Live Chat Code-->
     <div id="comm100-button-a96561bd-be8a-4725-b817-849e03126210"></div>
+    <script src="reveiws.js"></script>
     <script type="text/javascript">
         var Comm100API = Comm100API || {};
         (function(t) {
@@ -338,6 +338,78 @@
     <!--End Comm100 Live Chat Code-->
 </body>
 <script type="text/javascript">
+    for (let i = 0; i < reviews.length; i++) {
+        let one;
+        let two;
+        let three;
+        let four;
+        let five;
+
+        let ratingNum = reviews[i].rating;
+        if (ratingNum === 5) {
+            one = 'fas';
+            two = 'fas';
+            three = 'fas';
+            four = 'fas';
+            five = 'fas';
+        } else if (ratingNum === 4) {
+            one = 'fas';
+            two = 'fas';
+            three = 'fas';
+            four = 'fas';
+            five = 'far';
+        } else if (ratingNum === 3) {
+            one = 'fas';
+            two = 'fas';
+            three = 'fas';
+            four = 'far';
+            five = 'far';
+        } else if (ratingNum === 2) {
+            one = 'fas';
+            two = 'fas';
+            three = 'far';
+            four = 'far';
+            five = 'far';
+        } else if (ratingNum === 1) {
+            one = 'fas';
+            two = 'far';
+            three = 'far';
+            four = 'far';
+            five = 'far';
+        } else if (ratingNum === 0) {
+            one = 'far';
+            two = 'far';
+            three = 'far';
+            four = 'far';
+            five = 'far';
+        } else {
+            one = 'fas';
+            two = 'fas';
+            three = 'fas';
+            four = 'fas';
+            five = 'fas';
+        }
+        var stars = [one, two, three, four, five];
+        document.querySelector('#testimonials.testimonials .inner .row').innerHTML += `
+                    <div class="col">
+                        <div class="testimonial">
+                            <img src="../images/${reviews[i].imageSrc}">
+                            <div class="name">${reviews[i].name}</div>
+                            <div class="stars">
+                                <i class="${stars[0]} fa-star"></i>
+                                <i class="${stars[1]} fa-star"></i>
+                                <i class="${stars[2]} fa-star"></i>
+                                <i class="${stars[3]} fa-star"></i>
+                                <i class="${stars[4]} fa-star"></i>
+                            </div>
+                            <i class="fas fa-quote-left"></i>
+                            <p class="${reviews[i].textSize}-txt">${reviews[i].testimonial}
+                            </p>
+                        </div>
+                    </div>
+            `;
+    }
+
     function toggle() {
         var sec = document.getElementById('sec');
         var nav = document.getElementById('navigation-other');
