@@ -14,6 +14,26 @@
         <h1>All Courses</h1>
         <div class="border"></div>
     </div>
+    <div class="trial-course-card margin">
+        <div class="filter-cont">
+            <div class="stick-top-0">
+                <h2>Filter Courses</h2>
+                <div class="filter-path">
+                    <h3>Path</h3>
+                    <input type="radio" name="filter-path" id="pathAll">
+                    <span>All</span><br>
+                    <input type="radio" name="filter-path" id="pathSkill">
+                    <span>Skill</span><br>
+                    <input type="radio" name="filter-path" id="pathOther">
+                    <span>Other</span><br>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="courses-cont-all" id="addFilteredCourse">
+
+        </div>
+    </div>
     <div class="courses-body">
         <div class="courses-cont">
             <!-- <div class="card">
@@ -219,6 +239,36 @@
         });
     })
 </script>
+<script type="text/javascript">
+    const filterCont = document.getElementById('addFilteredCourse');
+    let filterPath = 'All';
 
+    function filter(filterName) {
+        filterPath = filterName;
+    }
+
+    function filterResults() {
+        for (let i = 0; i < courses.length; i++) {
+            const thisCourse = courses[i];
+            filterCont.innerHTML += `<div class="course">
+                <div class="prev" style="background: ${thisCourse.theme};">
+                    <p id="path"><span>${thisCourse.path}</span> Path</p>
+                    <h3 id="courseTitle">${thisCourse.name}</h3>
+                </div>
+                <div class="info">
+                    <div class="flex">
+                        <p class="level">Beg - Adv</p>
+                        <p class="duration">${thisCourse.duration}</p>
+                    </div>
+                    <h2>Learn ${thisCourse.name}</h2>
+                    <p id="desc">${thisCourse.text}</p>
+                    <a style="background: ${thisCourse.theme};" href="index.html?c=${i}">Book Course</a>
+                </div>
+            </div>`;
+        }
+    }
+
+    filterResults()
+</script>
 
 </html>

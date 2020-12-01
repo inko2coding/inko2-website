@@ -4,38 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INKO2 | Websites</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>Coding | INKO2</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
-<body id="body_tag">
+<body>
     <section class="banner-other" id="sec">
         <header>
-            <a href="home.html" class="logo">INKO2</a>
-            <h2>Websites</h2>
+            <a href="home" class="logo">INKO2</a>
+            <h2>Coding</h2>
             <div id="toggle" onclick="toggle()"></div>
         </header>
     </section>
     <div id="navigation-other">
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="coding.html">Coding</a></li>
-            <li><a href="websites.html">Websites</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="home">Home</a></li>
+            <li><a href="">Coding</a></li>
+            <li><a href="websites">Websites</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="about">About</a></li>
         </ul>
     </div>
-    <h1 style="text-align: center; margin-top: 30px;">Our Work</h1>
-    <div class="border"></div>
-    <div class="showcase-web">
-
+    <div class="testimonials">
+        <h1>Courses</h1>
+        <div class="border"></div>
     </div>
-    <!-- <h1 style="text-align: center; margin-top: 30px;">Website Themes</h1>
-    <div class="border"></div>
-    <div class="web-iframe">
+    <div class="courses-body">
+        <div class="courses-cont">
+            <div onclick="location.href='courses/course?c=0'" class="card">
+                <div class="imgBx">
+                    <img src="images/bg.jpg">
+                </div>
+                <div class="course-content">
+                    <h2>Trial Lesson</h2>
+                    <p>If you are interested in coding but not sure what type of coding then take this lesson. In this lesson we will explore what you could do with coding...
+                    </p>
+                </div>
+            </div>
+            <div onclick="location.href='courses/course?c=1'" class="card">
+                <div class="imgBx">
+                    <img src="images/bg.jpg">
+                </div>
+                <div class="course-content">
+                    <h2>HTML Course</h2>
+                    <p>In this course you will learn one of the easiest and needed coding languages for all websites: HTML. Most websites use it, from google to safari...
 
-    </div> -->
+                    </p>
+                </div>
+            </div>
+            <div onclick="location.href='courses/course?c=2'" class="card">
+                <div class="imgBx">
+                    <img src="images/bg.jpg">
+                </div>
+                <div class="course-content">
+                    <h2>CSS Course</h2>
+                    <p>In this course you will learn the most used styling language: CSS. CSS is what most websites use and if they don’t they use a version of CSS. CSS is...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-cont">
+        <a class="btn" href="courses/all">All Courses</a>
+        <br><br>
+    </div>
+    <div class="featured-image">
+        <img src="https://udemycoupons.me/wp-content/uploads/2020/10/100-OFF-Web-Development-Course-with-PHP-PDO-MySQL.jpg">
+        <div class="fea-sec">
+            <h2>Featured Course</h2>
+            <p>Learn how to be a top tier developer by taking our <a href="courses/course?c=6">Web Development</a> course. It includes everything you need to know to build an interactive and responsive website. In this course you will learn how to code in
+                HTML, CSS, and JavaScript, you will also learn how to use git and to operate the terminal.</div>
+    </div>
+    <div class="featured-image">
+        <div class="fea-sec">
+            <h2>Why Us??</h2>
+            <p>We create websites and teach coding classes at our customers’ pace. We will walk you through the basics and in the end, you will be efficient in coding or website management. Guess what? You won’t be charged unless you like the website or
+                the coding class. We have created websites for people in all fields, from restaurants to schools. Hurry up and be part of the INKO2 family. STOP. GO INKO!
+            </p>
+        </div>
+        <img src="images/bg.jpg">
+    </div>
     <footer id="footer">
         <div class="footer-top">
             <div class="footer-container">
@@ -50,10 +99,10 @@
                         <h2>Quick links</h2>
                         <ul>
                             <li><a href="#">Top of page</a></li>
-                            <li><a href="coding.html">Coding</a></li>
-                            <li><a href="websites.html">Websites</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="">Coding</a></li>
+                            <li><a href="websites">Websites</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-ms-6 col-xs-12 segment-three sm-mb-30">
@@ -75,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2 Inc.</p>
+        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2</p>
     </footer>
     <!--Begin Comm100 Live Chat Code-->
     <div id="comm100-button-a96561bd-be8a-4725-b817-849e03126210"></div>
@@ -106,7 +155,7 @@
             if (keyCode == 13) {
                 $.ajax({
                     type: 'POST',
-                    url: 'action.php',
+                    url: 'php/action.php',
                     data: {
                         email: email
                     },
@@ -124,7 +173,7 @@
             var email = $('#email').val();
             $.ajax({
                 type: 'POST',
-                url: 'action.php',
+                url: 'php/action.php',
                 data: {
                     email: email
                 },
@@ -138,68 +187,13 @@
         });
     })
 </script>
-<script>
+<script type="text/javascript">
     function toggle() {
         var sec = document.getElementById('sec');
         var nav = document.getElementById('navigation-other');
         sec.classList.toggle('active')
         nav.classList.toggle('active')
     }
-</script>
-<script>
-    const themeSpace = document.querySelector('.web-iframe');
-    const showSpace = document.querySelector('.showcase-web');
-    var webs = [{
-        url: 'http://wlats.inko2.com/home.html',
-        reurl: 'http://wlats.inko2.com/index.html',
-        name: 'West Los Angeles Tamil School',
-    }, {
-        url: 'https://www.colorsinbloomdesign.com/index2.html',
-        reurl: 'https://www.colorsinbloomdesign.com/index.html',
-        name: 'Colors In Bloom Design',
-    }, {
-        url: 'http://gsmusic.inko2.com/index.html?i=1',
-        reurl: 'http://gsmusic.inko2.com/',
-        name: 'GS Music',
-    }]
-
-    // var themes = [{
-    //     url: 'http://inko2.com',
-    //     name: 'code',
-    // }, {
-    //     url: 'http://inko2.com',
-    //     name: 'code',
-    // }, {
-    //     url: 'http://inko2.com',
-    //     name: 'code',
-    // }, {
-    //     url: 'http://inko2.com',
-    //     name: 'code',
-    // }]
-
-
-
-    for (let i = 0; i < webs.length; i++) {
-        showSpace.innerHTML += `
-            <div class="iframe-show"  >
-                <h3 class="title">${webs[i].name}</h3>
-                <iframe width="450px" scrolling="no" height="380px" src="${webs[i].url}" ></iframe>
-                <a target="_blank" class="show-btn" href="${webs[i].reurl}">Veiw Website</a>
-            </div>
-        `;
-
-    }
-
-    // for (let i = 0; i < themes.length; i++) {
-    //     themeSpace.innerHTML += `
-    //         <div class="iframe-theme" >
-    //             <h3 class="title">${themes[i].name}</h3>
-    //             <a target="_blank" href="${themes[i].url}"><iframe width="450px" scrolling="no" height="380px" src="${themes[i].url}" frameborder="1"></iframe></a>
-    //             <a target="_blank" class="demo-btn" href="${themes[i].url}">Veiw Website</a>
-    //         </div>
-    //     `;
-
-    // }
 </script>
 
 </html>

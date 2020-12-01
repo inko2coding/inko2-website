@@ -18,6 +18,19 @@ body {
     overflow-x: hidden !important;
 }
 
+.margin {
+    padding: 50px 75px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .margin {
+        padding: 20px;
+    }
+}
+
 header {
     position: absolute;
     top: 0;
@@ -792,6 +805,216 @@ footer h2 {
 
 /* All Courses styles */
 
+.trial-course-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trial-course-card .filter-cont {
+    padding: 0 20px;
+    min-width: 300px;
+}
+
+.trial-course-card .filter-cont .stick-top-0 {
+    top: 20px;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.trial-course-card .filter-cont input {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    display: none;
+}
+
+.trial-course-card .filter-cont input:checked+label {
+    color: rgb(57, 176, 216);
+}
+
+.trial-course-card .filter-cont input:checked+label {
+    transition: 0.2s;
+    margin-left: 20px;
+}
+
+.trial-course-card .filter-cont input:checked+label::before {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    color: rgb(57, 176, 216);
+    background-color: rgb(57, 176, 216);
+    overflow: hidden;
+    transition: 0.1s;
+    border-radius: 50%;
+}
+
+.trial-course-card .filter-cont label {
+    font-size: 18px;
+    position: relative;
+    bottom: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 0.1s;
+}
+
+.trial-course-card .filter-cont label:hover {
+    cursor: pointer;
+    color: rgb(57, 176, 216);
+    transition: 0.1s;
+}
+
+.trial-course-card .filter-cont h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #40c3ff;
+    text-align: center;
+}
+
+.trial-course-card hr {
+    margin: 0 15px;
+}
+
+.courses-cont-all {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.courses-cont-all .course {
+    display: flex;
+    border-radius: 20px;
+    padding: 0;
+    margin: 10px 0;
+    overflow: hidden;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+.courses-cont-all .course .prev {
+    background: #40c3ff;
+    padding: 22px 20px;
+    height: 100%;
+    width: 230px;
+    color: #f2f2f2;
+}
+
+.courses-cont-all .course .prev h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.courses-cont-all .course .prev p {
+    font-weight: 300;
+}
+
+.courses-cont-all .course .info {
+    padding: 10px 20px;
+    width: 480px;
+    position: relative;
+}
+
+.courses-cont-all .course .info .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 300;
+    color: #777;
+}
+
+.courses-cont-all .course .info h2 {
+    font-size: 28px;
+    letter-spacing: 1.2px;
+    margin-top: -25px;
+}
+
+.courses-cont-all .course .info p {
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 35px;
+}
+
+.courses-cont-all .course .info a {
+    padding: 10px 12px;
+    background: #40c3ff;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+@media (max-width: 1143px) {
+    .trial-course-card .filter-cont {
+        min-width: 200px;
+    }
+    .trial-course-card .filter-cont h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1069px) {
+    .courses-cont-all {
+        justify-content: left;
+    }
+    .courses-cont-all .course {
+        flex-direction: column;
+    }
+    .courses-cont-all .course .prev {
+        width: 100%;
+    }
+    .courses-cont-all .course .prev h3 {
+        font-size: 20px;
+    }
+    .courses-cont-all .course .info {
+        width: 300px;
+    }
+    .courses-cont-all .course .info h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-top: -35px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    .courses-cont-all .course .info p {
+        font-weight: 300;
+        margin-bottom: 55px;
+    }
+}
+
+@media (max-width: 590px) {
+    .trial-course-card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .trial-course-card .filter-cont {
+        padding: 0 20px;
+        min-width: 300px;
+    }
+    .trial-course-card .filter-cont input {
+        width: 25px;
+        height: 25px;
+        margin-top: 10px;
+    }
+    .trial-course-card .filter-cont span {
+        font-size: 18px;
+        position: relative;
+        bottom: 5px;
+    }
+    .trial-course-card .filter-cont h2 {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #40c3ff;
+        text-align: center;
+    }
+    .trial-course-card hr {
+        margin: 15px 0;
+    }
+}
+
 .all-courses-h1 {
     width: 100%;
     text-align: center;
@@ -823,123 +1046,6 @@ footer h2 {
     background: #40c3ff;
     color: #000;
     transition: 0.3s ease;
-}
-
-
-/* About page Styles */
-
-.text-abt-cont {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.intro-text {
-    max-width: 400px;
-    text-align: center;
-    transform: translateY(40px) translateX(-40px);
-    opacity: 0;
-    transition: 0.8s all ease-in-out;
-    margin-top: 100px;
-}
-
-.intro-appear {
-    transform: translateY(0px) translateX(0px);
-    opacity: 1;
-}
-
-.blu-txt {
-    color: #40c3ff;
-}
-
-.ora-txt {
-    color: #ffc340;
-}
-
-.gre-txt {
-    color: #40ffc3;
-}
-
-.icon-nav-cont {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-}
-
-.icon-nav-cont div {
-    margin: 50px 25px 80px 25px;
-    display: flex;
-    background: #000;
-    width: 100px;
-    align-items: center;
-}
-
-.icon-nav-cont div a {
-    position: absolute;
-    text-decoration: none;
-    text-align: center !important;
-    color: #434343;
-    transition: ease 0.3s;
-}
-
-.icon-nav-cont div a:hover {
-    color: #40c3ff;
-    transition: ease 0.3s;
-}
-
-.icon-nav-cont div a i {
-    text-align: center;
-    font-size: 30px;
-}
-
-.abt-txt-img {
-    margin-top: 200px;
-}
-
-@media only screen and (max-width: 600px) {
-    .icon-nav-cont div {
-        margin: 50px 10px 80px 10px;
-    }
-}
-
-
-/* Team Styles */
-
-.team-cont {
-    max-width: 1100px;
-    margin-bottom: 100px;
-}
-
-.team-card {
-    width: 300px;
-    height: 400px;
-    background: #aaa;
-    overflow: hidden;
-}
-
-.team-bg-img {
-    width: 100%;
-    height: 290px;
-}
-
-.pfp-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    position: relative;
-    top: -60px;
-    left: 90px;
-    border: 6px solid #aaa;
-}
-
-.team-txt-cont {
-    position: relative;
-    top: -85px;
-}
-
-.name {
-    color: #333;
-    text-align: center;
 }
 
 

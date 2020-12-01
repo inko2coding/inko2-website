@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, rgb(0, 0, 50), rgb(0, 247, 255));
+    overflow: hidden;
+}
+
+form {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 300px;
+    border: 1px solid #444;
+    background: #d7d7d7;
+    color: #222;
+}
+
+input {
+    height: 30px;
+}
+
+.name-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    width: 140px;
+    height: 30px;
+    margin: 9px;
+    margin-bottom: 20px;
+}
+
+.send {
+    width: 120px;
+    padding: 3px 12px;
+    height: 30px;
+    background: rgb(0, 0, 100);
+    border: transparent;
+    color: #fff;
+}

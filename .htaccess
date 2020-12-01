@@ -1,1 +1,24 @@
-ErrorDocument 404 /errors/404/
+ErrorDocument 404 http://inko2.com/error/404
+ErrorDocument 500 http://inko2.com/error/500
+
+# Redirecting from http to https
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# mod_rewrite starts here
+
+RewriteEngine on
+
+# does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run the Rule!
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check for file in directory with .html extension
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+# Here we actually show the page that has the .html extension
+
+RewriteRule ^(.*)$ $1.html [NC,L]

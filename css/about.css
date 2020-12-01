@@ -1,0 +1,247 @@
+/* About page Styles */
+
+.text-abt-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-text {
+    max-width: 400px;
+    text-align: center;
+    transform: translateY(40px) translateX(-40px);
+    opacity: 0;
+    transition: 0.8s all ease-in-out;
+    margin-top: 100px;
+}
+
+.intro-appear {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+}
+
+.blu-txt {
+    color: #40c3ff;
+}
+
+.ora-txt {
+    color: #ffc340;
+}
+
+.gre-txt {
+    color: #40ffc3;
+}
+
+.icon-nav-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.icon-nav-cont div {
+    margin: 50px 25px 80px 25px;
+    display: flex;
+    background: #000;
+    width: 100px;
+    align-items: center;
+}
+
+.icon-nav-cont div a {
+    position: absolute;
+    text-decoration: none;
+    text-align: center !important;
+    color: #434343;
+    transition: ease 0.3s;
+}
+
+.icon-nav-cont div a:hover {
+    color: #40c3ff;
+    transition: ease 0.3s;
+}
+
+.icon-nav-cont div a i {
+    text-align: center;
+    font-size: 30px;
+}
+
+.abt-txt-img {
+    margin-top: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-nav-cont div {
+        margin: 50px 10px 80px 10px;
+    }
+}
+
+
+/* Team Styles */
+
+.team-cont {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 20px;
+    transition: 0.2s ease;
+    text-align: center;
+}
+
+.team-card:hover {
+    border: 1px solid #40c3ff;
+}
+
+.team-card .img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.team-card .img img {
+    height: 100%;
+    opacity: 1;
+}
+
+.team-card .img .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.team-card:hover .img .overlay {
+    background: #40c3ffaa;
+}
+
+.team-card:hover .img .overlay p {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.team-card .img .overlay p {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.team-card p {
+    font-size: 14px;
+}
+
+
+/* Team Bio Styles */
+
+
+/* body {
+    overflow: hidden;
+} */
+
+.team-bio {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    max-height: 100%;
+    /* display: none; */
+}
+
+.team-bio .sticky-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-bottom: -10px;
+}
+
+.team-bio .main {
+    position: relative;
+    display: none;
+    width: 450px;
+    overflow: hidden;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.team-bio .main .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    padding: 20px;
+    text-align: left;
+    max-height: 600px;
+    padding-top: 300px;
+    height: 100%;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.team-bio .main .body .flex {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.team-bio .main .body .flex .info p {
+    max-width: 250px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.team-bio .main .body .img {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    left: -20px;
+    margin-bottom: 20px;
+}
+
+.team-bio .main .body .img img {
+    height: 100%;
+    clip-path: circle();
+}
+
+.team-bio .stick-bottom {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}

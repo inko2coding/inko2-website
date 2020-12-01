@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="stylesheet" href="../../../css/footer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Testimonials | INKO2 Inc.</title>
+</head>
+
+<body>
+    <div class="testimonials">
+        <h1>Testimonials</h1>
+        <div class="border"></div>
+    </div>
+    <div id="testimonials" class="testimonials">
+        <div class="inner">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+    <div class="btn-cont">
+        <a class="btn" href="../../about.html">Back</a>
+        <br><br>
+    </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+                        <h3>INKO2</h3>
+                        <p>
+                            We offer coding classes and walkthroughs on how to start and successfully run a business for people who have no experience with it. We also have a kitchen where we bake mouthwatering treats and make tasty meals.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+                        <h2>Quick links</h2>
+                        <ul>
+                            <li><a href="#">Top of page</a></li>
+                            <li><a href="coding.html">Coding</a></li>
+                            <li><a href="kitchen.html">Kitchen</a></li>
+                            <li><a href="websites.html">Websites</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-three sm-mb-30">
+                        <h2>Follow Us</h2>
+                        <p>Follow us on social media to stay up to date with INKO2 or if you have any questions or suggestions. Stay with the future. STOP. GO INKO!</p>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto: inko2coding@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="col-md-3 col-ms-6 col-xs-12 segment-four sm-mb-30">
+                        <h2>Our Newletter</h2>
+                        <p>Subscribe to our newsletter to get the latest news, offers, and updates.
+                        </p>
+                        <input type="email" id="email" placeholder="abc@123.com">
+                        <input type="submit" id="submit" value="Subscribe">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2 Inc.</p>
+    </footer>
+    <script src="../../reveiws.js"></script>
+    <script>
+        for (let i = 0; i < reviews.length; i++) {
+            let one;
+            let two;
+            let three;
+            let four;
+            let five;
+
+            let ratingNum = reviews[i].rating;
+            if (ratingNum === 5) {
+                one = 'fas';
+                two = 'fas';
+                three = 'fas';
+                four = 'fas';
+                five = 'fas';
+            } else if (ratingNum === 4) {
+                one = 'fas';
+                two = 'fas';
+                three = 'fas';
+                four = 'fas';
+                five = 'far';
+            } else if (ratingNum === 3) {
+                one = 'fas';
+                two = 'fas';
+                three = 'fas';
+                four = 'far';
+                five = 'far';
+            } else if (ratingNum === 2) {
+                one = 'fas';
+                two = 'fas';
+                three = 'far';
+                four = 'far';
+                five = 'far';
+            } else if (ratingNum === 1) {
+                one = 'fas';
+                two = 'far';
+                three = 'far';
+                four = 'far';
+                five = 'far';
+            } else if (ratingNum === 0) {
+                one = 'far';
+                two = 'far';
+                three = 'far';
+                four = 'far';
+                five = 'far';
+            } else {
+                one = 'fas';
+                two = 'fas';
+                three = 'fas';
+                four = 'fas';
+                five = 'fas';
+            }
+            var stars = [one, two, three, four, five];
+            document.querySelector('#testimonials.testimonials .inner .row').innerHTML += `
+                    <div class="col">
+                        <div class="testimonial">
+                            <img src="../../../images/${reviews[i].imageSrc}">
+                            <div class="name">${reviews[i].name}</div>
+                            <div class="stars">
+                                <i class="${stars[0]} fa-star"></i>
+                                <i class="${stars[1]} fa-star"></i>
+                                <i class="${stars[2]} fa-star"></i>
+                                <i class="${stars[3]} fa-star"></i>
+                                <i class="${stars[4]} fa-star"></i>
+                            </div>
+                            <i class="fas fa-quote-left"></i>
+                            <p class="${reviews[i].textSize}-txt">${reviews[i].testimonial}
+                            </p>
+                        </div>
+                    </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>

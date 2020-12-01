@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INKO2 | Websites</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>Websites | INKO2</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
 <body id="body_tag">
     <section class="banner-other" id="sec">
         <header>
-            <a href="home.html" class="logo">INKO2</a>
+            <a href="home" class="logo">INKO2</a>
             <h2>Websites</h2>
             <div id="toggle" onclick="toggle()"></div>
         </header>
     </section>
     <div id="navigation-other">
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="coding.html">Coding</a></li>
-            <li><a href="websites.html">Websites</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="home">Home</a></li>
+            <li><a href="coding">Coding</a></li>
+            <li><a href="">Websites</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="about">About</a></li>
         </ul>
     </div>
     <h1 style="text-align: center; margin-top: 30px;">Our Work</h1>
@@ -50,10 +50,10 @@
                         <h2>Quick links</h2>
                         <ul>
                             <li><a href="#">Top of page</a></li>
-                            <li><a href="coding.html">Coding</a></li>
-                            <li><a href="websites.html">Websites</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coding">Coding</a></li>
+                            <li><a href="">Websites</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-ms-6 col-xs-12 segment-three sm-mb-30">
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2 Inc.</p>
+        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2</p>
     </footer>
     <!--Begin Comm100 Live Chat Code-->
     <div id="comm100-button-a96561bd-be8a-4725-b817-849e03126210"></div>
@@ -106,7 +106,7 @@
             if (keyCode == 13) {
                 $.ajax({
                     type: 'POST',
-                    url: 'action.php',
+                    url: 'php/action.php',
                     data: {
                         email: email
                     },
@@ -124,7 +124,7 @@
             var email = $('#email').val();
             $.ajax({
                 type: 'POST',
-                url: 'action.php',
+                url: 'php/action.php',
                 data: {
                     email: email
                 },

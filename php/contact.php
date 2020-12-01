@@ -50,6 +50,6 @@
     }
   }
 
-  header('Location: contact.html?mail-sent')
+  header('Location: ../contact?mail-sent')
 
 ?> 

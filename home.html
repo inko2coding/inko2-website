@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INKO2 | Home</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>Home | INKO2</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <meta name="keywords" content="INKO, INKO2, inko, inko2, inko2.com, inkotwo, inko two, coding, lessons, classes, websites, web development">
     <meta name="description" content="We are the two brothers that teach everyone coding and other life skills made easy for everyone to undestand. Learn the future of the world. We also create websites for those who want to establish their business. STOP. GO INKO!">
@@ -14,7 +14,7 @@
 <body>
     <section class="banner" id="sec">
         <header>
-            <a href="#" class="logo">INKO2</a>
+            <a href="" class="logo">INKO2</a>
             <div id="toggle" onclick="toggle()"></div>
         </header>
         <div class="content">
@@ -22,7 +22,7 @@
             <p>We are the two brothers that teach everyone coding and other life skills made easy for everyone to undestand. We mainly teach web development to those who want to create awesome websites that inspire. Learn the future of the world.<strong> STOP.
                 GO INKO!</strong>
             </p>
-            <a href="coding.html">Code Now!</a>
+            <a href="coding">Code Now!</a>
         </div>
         <ul class="sci">
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -32,11 +32,11 @@
     </section>
     <div id="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="coding.html">Coding</a></li>
-            <li><a href="websites.html">Websites</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="coding">Coding</a></li>
+            <li><a href="websites">Websites</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
         </ul>
     </div>
     <div class="testimonials" id="testimonials">
@@ -47,7 +47,7 @@
 
             </div>
             <div class="btn-cont" style="margin-top: 20px;">
-                <a class="btn" href="about/testimonials/index.html">All Testimonials</a>
+                <a class="btn" href="about/testimonials">All Testimonials</a>
                 <br><br>
             </div>
             <!-- <div id="test-one" class="row">
@@ -231,12 +231,12 @@
         <img class="appear-img" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/lJAPkWPDTk4QwHMTAoyn">
         <div class="fea-sec">
             <h2>Web Development Course</h2>
-            <p>Our best selling and most demanded course is our <a href="courses/more-courses.html#web-dev">Web Development</a> course. The course includes everything you need to know to build an interactive and responsive website. In this course you will
-                learn how to code in HTML, CSS, and JavaScript, you will also learn how to operate git and you will learn the things you need to about a terminal.</p>
+            <p>Our best selling and most demanded course is our <a href="courses/course?c=6">Web Development</a> course. The course includes everything you need to know to build an interactive and responsive website. In this course you will learn how to
+                code in HTML, CSS, and JavaScript, you will also learn how to operate git and you will learn the things you need to about a terminal.</p>
         </div>
     </div>
     <div class="second-banner">
-        <img src="../images/bg.jpg">
+        <img src="images/bg.jpg">
     </div>
     <div class="deals">
         <div class="testimonials">
@@ -275,10 +275,10 @@
                         <h2>Quick links</h2>
                         <ul>
                             <li><a href="#">Top of page</a></li>
-                            <li><a href="coding.html">Coding</a></li>
-                            <li><a href="websites.html">Websites</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coding">Coding</a></li>
+                            <li><a href="websites">Websites</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-ms-6 col-xs-12 segment-three sm-mb-30">
@@ -300,9 +300,9 @@
                 </div>
             </div>
         </div>
-        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2 Inc.</p>
+        <p class="footer-bottom-text">All Rights Reserved by &copy;INKO2. 2020. Powered by INKO2</p>
     </footer>
-    <script src="reveiws.js"></script>
+    <script src="js/reveiws.js"></script>
     <script type="text/javascript">
         function toggle() {
             var sec = document.getElementById('sec');
@@ -453,7 +453,7 @@
                 if (keyCode == 13) {
                     $.ajax({
                         type: 'POST',
-                        url: 'action.php',
+                        url: 'php/action.php',
                         data: {
                             email: email
                         },
@@ -471,7 +471,7 @@
                 var email = $('#email').val();
                 $.ajax({
                     type: 'POST',
-                    url: 'action.php',
+                    url: 'php/action.php',
                     data: {
                         email: email
                     },
