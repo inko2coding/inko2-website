@@ -24,4 +24,10 @@ var reviews = [{
     name: 'Beth Brown',
     imageSrc: 'bg.jpg',
     textSize: 'bg',
+}, {
+    testimonial: 'Koshik and Inesh paid close attention to our needs in completing the website. Changes and adjustments were completed very timely. I would highly recommend INKO2 for your website needs.',
+    rating: 5,
+    name: 'Denise Maggio',
+    imageSrc: 'denise.jpg',
+    textSize: 'sm',
 }]
